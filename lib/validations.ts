@@ -38,8 +38,20 @@ export const ScrapeWebsiteSchema = z.object({
   url: z.string().url("Invalid URL format"),
 });
 
+/**
+ * Validation schema for the /api/conversation-state endpoint
+ */
+export const ConversationStateSchema = z.object({
+  action: z.enum(['reset', 'clear-old', 'update']),
+  data: z.object({
+    currentTopic: z.string().optional(),
+    userPreferences: z.record(z.any()).optional(),
+  }).optional(),
+});
+
 export type ApplyAICodeInput = z.infer<typeof ApplyAICodeSchema>;
 export type CreateSandboxInput = z.infer<typeof CreateSandboxSchema>;
 export type InstallPackagesInput = z.infer<typeof InstallPackagesSchema>;
 export type SearchInput = z.infer<typeof SearchSchema>;
 export type ScrapeWebsiteInput = z.infer<typeof ScrapeWebsiteSchema>;
+export type ConversationStateInput = z.infer<typeof ConversationStateSchema>;

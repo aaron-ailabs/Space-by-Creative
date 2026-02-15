@@ -1,4 +1,6 @@
 import { NextResponse } from 'next/server';
+import { SandboxError, AppError } from '@/lib/errors';
+import { logger } from '@/lib/logger';
 
 declare global {
   var activeSandbox: any;
@@ -7,13 +9,10 @@ declare global {
 export async function POST() {
   try {
     if (!global.activeSandbox) {
-      return NextResponse.json({ 
-        success: false, 
-        error: 'No active sandbox' 
-      }, { status: 400 });
+      throw new AppError('No active sandbox available', 400, 'NO_ACTIVE_SANDBOX');
     }
     
-    console.log('[create-zip] Creating project zip...');
+    logger.info('Creating project zip archive');
     
     // Create zip file in sandbox using standard commands
     const zipResult = await global.activeSandbox.runCommand({
@@ -23,7 +22,8 @@ export async function POST() {
     
     if (zipResult.exitCode !== 0) {
       const error = await zipResult.stderr();
-      throw new Error(`Failed to create zip: ${error}`);
+      logger.error('Failed to create zip in sandbox', new Error(error));
+      throw new SandboxError(`Failed to create zip: ${error}`);
     }
     
     const sizeResult = await global.activeSandbox.runCommand({
@@ -32,7 +32,7 @@ export async function POST() {
     });
     
     const fileSize = await sizeResult.stdout();
-    console.log(`[create-zip] Created project.zip (${fileSize.trim()} bytes)`);
+    logger.info('Created project zip successfully', { size: fileSize.trim() });
     
     // Read the zip file and convert to base64
     const readResult = await global.activeSandbox.runCommand({
@@ -42,7 +42,8 @@ export async function POST() {
     
     if (readResult.exitCode !== 0) {
       const error = await readResult.stderr();
-      throw new Error(`Failed to read zip file: ${error}`);
+      logger.error('Failed to read zip file as base64', new Error(error));
+      throw new SandboxError(`Failed to read zip file: ${error}`);
     }
     
     const base64Content = (await readResult.stdout()).trim();
@@ -58,12 +59,16 @@ export async function POST() {
     });
     
   } catch (error) {
-    console.error('[create-zip] Error:', error);
+    if (error instanceof AppError) {
+      return NextResponse.json(
+        { error: error.message, code: error.code, details: error.details },
+        { status: error.statusCode }
+      );
+    }
+
+    logger.error('Unexpected error in create-zip', error);
     return NextResponse.json(
-      { 
-        success: false, 
-        error: (error as Error).message 
-      }, 
+      { success: false, error: (error as Error).message, code: 'INTERNAL_ERROR' }, 
       { status: 500 }
     );
   }
