@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import { APP_NAME, APP_DESCRIPTION } from "@/config/branding";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Toaster } from "sonner";
+import { CommandPalette } from "@/components/CommandPalette";
 import "./globals.css";
 
 const inter = Inter({ 
@@ -61,6 +62,7 @@ export default function RootLayout({
               className: "brutalist-toast",
             }}
           />
+          <CommandPalette />
         </ThemeProvider>
       </body>
     </html>
