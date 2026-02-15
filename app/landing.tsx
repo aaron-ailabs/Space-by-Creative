@@ -19,6 +19,7 @@ import HomeHeroTitle from "@/components/app/(home)/sections/hero/Title/Title";
 import HeroInput from "@/components/app/(home)/sections/hero-input/HeroInput";
 import { Connector } from "@/components/shared/layout/curvy-rect";
 import HeroFlame from "@/components/shared/effects/flame/hero-flame";
+import { BUILDER_NAME, BUILDER_URL } from "@/config/branding";
 import FirecrawlIcon from "@/components/FirecrawlIcon";
 import FirecrawlLogo from "@/components/FirecrawlLogo";
 
@@ -49,7 +50,7 @@ export default function LandingPage() {
 
               <div className="flex gap-8">
                 <Link
-                  href="https://github.com/mendableai/open-lovable"
+                  href="https://github.com/mendableai/space-by-creative"
                   target="_blank"
                   className="contents"
                 >
@@ -80,6 +81,17 @@ export default function LandingPage() {
               {/* Hero Input */}
               <div className="mt-24">
                 <HeroInput />
+              </div>
+
+              <div className="mt-16 text-center">
+                <a
+                  className="text-label-small text-black-alpha-48 hover:text-black-alpha-72 transition-all"
+                  href={BUILDER_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Built by {BUILDER_NAME}
+                </a>
               </div>
             </div>
           </div>

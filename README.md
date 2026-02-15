@@ -1,15 +1,15 @@
-# Open Lovable
+# Space by Creative
 
-Chat with AI to build React apps instantly. An example app made by the [Firecrawl](https://firecrawl.dev/?ref=open-lovable-github) team. For a complete cloud solution, check out [Lovable.dev](https://lovable.dev/) ❤️.
+Chat with AI to build React apps instantly. Built by [Aaron from Creative Labs](https://github.com/aaron-ailabs). Based on an example app by the Creative team. For a complete cloud solution, check out [Lovable.dev](https://lovable.dev/) ❤️.
 
-<img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmZtaHFleGRsMTNlaWNydGdianI4NGQ4dHhyZjB0d2VkcjRyeXBucCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZFVLWMa6dVskQX0qu1/giphy.gif" alt="Open Lovable Demo" width="100%"/>
+<img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmZtaHFleGRsMTNlaWNydGdianI4NGQ4dHhyZjB0d2VkcjRyeXBucCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZFVLWMa6dVskQX0qu1/giphy.gif" alt="Space by Creative Demo" width="100%"/>
 
 ## Setup
 
 1. **Clone & Install**
 ```bash
-git clone https://github.com/firecrawl/open-lovable.git
-cd open-lovable
+git clone https://github.com/firecrawl/space-by-creative.git
+cd space-by-creative
 pnpm install  # or npm install / yarn install
 ```
 

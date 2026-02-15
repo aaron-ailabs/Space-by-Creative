@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Roboto_Mono } from "next/font/google";
 import localFont from "next/font/local";
+import { APP_NAME, APP_DESCRIPTION } from "@/config/branding";
 import "./globals.css";
 
 const inter = Inter({ 
@@ -26,8 +27,9 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Open Lovable v3",
-  description: "Re-imagine any website in seconds with AI-powered website builder.",
+  title: APP_NAME,
+  description: APP_DESCRIPTION,
+  applicationName: APP_NAME,
 };
 
 export default function RootLayout({

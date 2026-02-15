@@ -1,11 +1,11 @@
 {
-  "name": "create-open-lovable",
+  "name": "create-space-by-creative",
   "version": "1.0.0",
-  "description": "CLI to bootstrap Open Lovable with your choice of sandbox provider",
+  "description": "CLI to bootstrap Space by Creative with your choice of sandbox provider",
   "type": "module",
   "main": "index.js",
   "bin": {
-    "create-open-lovable": "./index.js"
+    "create-space-by-creative": "./index.js"
   },
   "scripts": {
     "test": "node index.js --dry-run"

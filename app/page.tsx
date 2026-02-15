@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { appConfig } from '@/config/app.config';
+import { BUILDER_NAME, BUILDER_URL } from "@/config/branding";
 import { toast } from "sonner";
 
 // Import shared components
@@ -238,7 +239,7 @@ export default function HomePage() {
               <div className="flex gap-8">
                 <a
                   className="contents"
-                  href="https://github.com/mendableai/open-lovable"
+                  href="https://github.com/mendableai/space-by-creative"
                   target="_blank"
                 >
                   <ButtonUI variant="tertiary">
@@ -265,13 +266,23 @@ export default function HomePage() {
               <p className="text-center text-body-large">
                 Clone brand format or re-imagine any website, in seconds.
               </p>
-              <Link
-                className="bg-black-alpha-4 hover:bg-black-alpha-6 rounded-6 px-8 lg:px-6 text-label-large h-30 lg:h-24 block mt-8 mx-auto w-max gap-4 transition-all"
-                href="#"
-                onClick={(e) => e.preventDefault()}
-              >
-                Powered by Firecrawl.
-              </Link>
+              <div className="flex flex-col items-center gap-4 mt-8">
+                <Link
+                  className="bg-black-alpha-4 hover:bg-black-alpha-6 rounded-6 px-8 lg:px-6 text-label-large h-30 lg:h-24 flex items-center gap-4 transition-all w-max"
+                  href="#"
+                  onClick={(e) => e.preventDefault()}
+                >
+                  Powered by Firecrawl.
+                </Link>
+                <a
+                  className="text-label-small text-black-alpha-48 hover:text-black-alpha-72 transition-all"
+                  href={BUILDER_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Built by {BUILDER_NAME}
+                </a>
+              </div>
             </div>
           </div>
 
