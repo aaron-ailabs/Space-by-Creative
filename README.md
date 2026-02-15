@@ -1,6 +1,8 @@
 # Space by Creative
 
-Chat with AI to build React apps instantly. Built by [Aaron from Creative Labs](https://github.com/aaron-ailabs). Based on an example app by the Creative team. For a complete cloud solution, check out [Lovable.dev](https://lovable.dev/) ❤️.
+Space: Skills on Demand, Clarity in Collapse.
+
+Chat with AI to build React apps instantly. Developed by **Creative Labs Digital, Sarawak, Malaysia**.
 
 <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmZtaHFleGRsMTNlaWNydGdianI4NGQ4dHhyZjB0d2VkcjRyeXBucCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZFVLWMa6dVskQX0qu1/giphy.gif" alt="Space by Creative Demo" width="100%"/>
 
@@ -8,7 +10,7 @@ Chat with AI to build React apps instantly. Built by [Aaron from Creative Labs](
 
 1. **Clone & Install**
 ```bash
-git clone https://github.com/firecrawl/space-by-creative.git
+git clone https://github.com/aaron-ailabs/space-by-creative.git
 cd space-by-creative
 pnpm install  # or npm install / yarn install
 ```

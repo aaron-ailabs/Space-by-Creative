@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Space by Creative is an AI-powered website builder that allows users to chat with AI to build React apps instantly. It's a Next.js application that integrates with various AI providers (OpenAI, Anthropic, Google, Groq) and sandbox providers (Vercel, E2B) to generate and deploy websites in real-time.
+Space by Creative is an AI-powered website builder developed by Creative Labs Digital, Sarawak, Malaysia. It allows users to chat with AI to build React apps instantly. It's a Next.js application that integrates with various AI providers (OpenAI, Anthropic, Google, Groq) and sandbox providers (Vercel, E2B) to generate and deploy websites in real-time.
 
 ## Development Commands
 
@@ -96,7 +96,7 @@ styles/                 # Styling system
 └── design-system/    # Design system utilities
 
 packages/               # Monorepo packages
-└── create-open-lovable/  # CLI tool for creating new projects
+└── create-space-by-creative/  # CLI tool for creating new projects
 ```
 
 ### API Routes Structure

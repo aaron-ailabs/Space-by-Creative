@@ -282,7 +282,7 @@ export default function HomePage() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Built by {BUILDER_NAME}
+                  Developed by {BUILDER_NAME}
                 </a>
               </div>
             </div>

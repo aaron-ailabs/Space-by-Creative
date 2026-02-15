@@ -90,7 +90,7 @@ export default function LandingPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Built by {BUILDER_NAME}
+                  Developed by {BUILDER_NAME}
                 </a>
               </div>
             </div>

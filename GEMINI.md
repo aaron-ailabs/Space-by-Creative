@@ -1,7 +1,7 @@
 # Space by Creative Project Context
 
 ## Project Overview
-**Space by Creative** is an open-source platform for building React applications instantly using AI. It allows users to clone existing websites or generate new ones from natural language prompts. The project is developed by [Aaron from Creative Labs](https://github.com/aaron-ailabs) and serves as a local/customizable alternative to Lovable.dev.
+**Space by Creative** is an open-source platform for building React applications instantly using AI. It allows users to clone existing websites or generate new ones from natural language prompts. The project is developed by **Creative Labs Digital, Sarawak, Malaysia**.
 
 ### Core Technologies
 - **Framework:** Next.js 15 (App Router) with React 19.

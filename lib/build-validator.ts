@@ -17,7 +17,7 @@ export async function validateBuild(sandboxUrl: string, sandboxId: string): Prom
     // Step 2: Check if the sandbox is actually serving content
     const response = await fetch(sandboxUrl, {
       headers: {
-        'User-Agent': 'OpenLovable-Validator',
+        'User-Agent': 'SpaceByCreative-Validator',
         'Cache-Control': 'no-cache'
       }
     });
